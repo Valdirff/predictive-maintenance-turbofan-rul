@@ -289,7 +289,7 @@ Where `d = RUL_pred - RUL_true`. A late prediction of 20 cycles receives a penal
 
 ### Performance Benchmark — FD001
 
-| Model | RMSE ↓ | NASA Score ↓ | Train Time | Inference Time | Interpretability |
+| Model | RMSE | NASA Score | Train Time | Inference Time | Interpretability |
 | :--- | :---: | :---: | :---: | :---: | :--- |
 | **Stochastic** | 46.8 | 19,912 | < 1s | 6.5s | High (physical) |
 | **XGBoost** | **13.96** | **342** | ~60s | 0.008s | Medium (SHAP) |

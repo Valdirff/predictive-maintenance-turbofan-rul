@@ -5,7 +5,7 @@
 This repository presents a full **Prognostics and Health Management (PHM)** pipeline for turbofan engine RUL estimation. It evaluates three fundamentally distinct modeling paradigms — from physics-inspired stochastic models to state-of-the-art deep learning with self-attention — on the widely used NASA FD001 benchmark.
 
 <p align="center">
-  <img src="docs/banner.png" width="100%" alt="Turbofan RUL Prognostics Banner" />
+  <img src="docs/NASA C-MAPSS.png" width="100%" alt="NASA C-MAPSS Turbofan Dataset" />
 </p>
 <p align="center">
   <em>Figure 1. Composite sensor readings from the NASA C-MAPSS FD001 fleet. Each line represents a degrading turbofan engine running to failure across hundreds of operational cycles.</em>

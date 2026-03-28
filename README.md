@@ -8,7 +8,7 @@ This repository presents a full **Prognostics and Health Management (PHM)** pipe
   <img src="docs/banner.png" width="100%" alt="Turbofan RUL Prognostics Banner" />
 </p>
 <p align="center">
-  <em>Figure 1. Fleet of turbofan engines running to failure. Each trajectory ends at the point the engine exceeded operational limits.</em>
+  <em>Figure 1. Composite sensor readings from the NASA C-MAPSS FD001 fleet. Each line represents a degrading turbofan engine running to failure across hundreds of operational cycles.</em>
 </p>
 
 ---
@@ -142,7 +142,7 @@ For each test engine, the observed HI trajectory is used to reconstruct a **conv
 </p>
 
 <p align="center">
-  <img src="results/figures/real_vs_pred_stochastic.png" width="75%" alt="Stochastic Predictions" />
+  <img src="results/figures/stochastic/real_vs_pred_stochastic.png" width="75%" alt="Stochastic Predictions" />
 </p>
 <p align="center">
   <em>Figure 3. Stochastic model predictions vs. ground truth on the 100 test engines. Scatter reflects the model's sensitivity to noisy sensors in early degradation cycles.</em>

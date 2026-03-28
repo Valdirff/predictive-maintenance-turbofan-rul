@@ -1,0 +1,15 @@
+{
+  "model": "Stochastic",
+  "rmse": 46.8058,
+  "nasa_score": 19911.84,
+  "mae": 37.2363,
+  "n_samples": 100,
+  "train_time_s": 0.298,
+  "inference_time_s": 11.3385,
+  "interpretability": "High",
+  "computational_cost": "Low-Medium",
+  "uncertainty_quantification": true,
+  "mean_ci_width_cycles": 129.57,
+  "failure_threshold": 0.0189,
+  "phi": 0.0
+}

@@ -1,0 +1,76 @@
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.mypy_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ── Environments ──────────────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+.env
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ── Data — raw data is never tracked (too large, dataset must be downloaded) ──
+data/raw/
+CMAPSSData.zip
+
+# ── Artigos (PDFs not tracked in git) ────────────────────────────────────────
+artigos/
+
+# ── Notebooks (exploratory, not part of the production pipeline) ──────────────
+notebooks/
+
+# ── Artifacts — generated at runtime, not committed ──────────────────────────
+artifacts/trained_models/
+artifacts/scalers/
+artifacts/metadata/
+
+# ── Results — exclude figures NOT used in the README ─────────────────────────
+# Stochastic figures: keep only hi_fleet_trajectories and real_vs_pred
+results/figures/stochastic/health_indicator.png
+results/figures/stochastic/hi_degradation_detail.png
+results/figures/stochastic/residuals_analysis.png
+results/figures/stochastic/rul_per_engine_with_ci.png
+results/figures/stochastic/wls_loglog_fit.png
+results/figures/stochastic/residuals_stochastic.png
+results/figures/stochastic/rul_actual_vs_predicted.png
+# Stochastic root-level duplicates
+results/figures/real_vs_pred_stochastic.png
+results/figures/residuals_stochastic.png
+# Shared folder (auxiliary)
+results/figures/shared/
+# XGBoost: keep only real_vs_pred and feature_importance
+results/figures/xgboost/residuals_xgboost.png
+# LSTM: keep only real_vs_pred and learning_curves
+results/figures/lstm/residuals.png
+# Tables (generated at runtime)
+results/tables/
+
+# ── Docs — internal working notes, not for public repo ───────────────────────
+docs/current_exp_implementation_review.md
+docs/exp_next_steps.md
+
+# ── IDE / OS ──────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+*.log
+mlflow.db
+mlruns/

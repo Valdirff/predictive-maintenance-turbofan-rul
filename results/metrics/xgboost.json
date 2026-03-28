@@ -1,0 +1,20 @@
+{
+  "model": "XGBoost",
+  "rmse": 13.9573,
+  "nasa_score": 341.54,
+  "mae": 10.8309,
+  "n_samples": 100,
+  "train_time_s": 61.427,
+  "inference_time_s": 0.0081,
+  "interpretability": "High (Feature Importance)",
+  "computational_cost": "Low-Medium",
+  "n_features": 99,
+  "best_params": {
+    "subsample": 0.8,
+    "n_estimators": 400,
+    "max_depth": 6,
+    "learning_rate": 0.05,
+    "colsample_bytree": 0.8
+  },
+  "training_samples": 12878
+}

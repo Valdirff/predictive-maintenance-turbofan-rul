@@ -1,0 +1,14 @@
+{
+  "model": "LSTM_Optimized",
+  "rmse": 16.5505,
+  "nasa_score": 439.84,
+  "mae": 12.749,
+  "n_samples": 100,
+  "train_time_s": 509.641,
+  "inference_time_s": 0.0143,
+  "interpretability": "Medium (Attention)",
+  "computational_cost": "High",
+  "window_size": 30,
+  "features": "Raw + Rolling Mean",
+  "sensor_selection": "Correlation > 0.1"
+}

@@ -1,0 +1,13 @@
+{
+  "model": "LSTM",
+  "rmse": 17.4268,
+  "nasa_score": 563.4,
+  "mae": 13.5849,
+  "n_samples": 100,
+  "train_time_s": 196.722,
+  "inference_time_s": 0.0128,
+  "interpretability": "Medium (Attention)",
+  "computational_cost": "High",
+  "window_size": 30,
+  "architecture": "Attention-LSTM"
+}

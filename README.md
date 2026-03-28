@@ -291,9 +291,9 @@ Where `d = RUL_pred - RUL_true`. A late prediction of 20 cycles receives a penal
 
 | Model | RMSE ↓ | NASA Score ↓ | Train Time | Inference Time | Interpretability |
 | :--- | :---: | :---: | :---: | :---: | :--- |
-| **Stochastic** | 46.8 | 19,912 | < 1s | 6.5s | ⭐⭐⭐ High (physical) |
-| **XGBoost** | **13.96** | **342** | ~60s | 0.008s | ⭐⭐ Medium (SHAP) |
-| **Attention-LSTM** | 16.55 | 440 | ~510s | 0.014s | ⭐ Low/Medium (Attention weights) |
+| **Stochastic** | 46.8 | 19,912 | < 1s | 6.5s | High (physical) |
+| **XGBoost** | **13.96** | **342** | ~60s | 0.008s | Medium (SHAP) |
+| **Attention-LSTM** | 16.55 | 440 | ~510s | 0.014s | Low/Medium (Attention weights) |
 
 <p align="center">
   <img src="results/figures/model_comparison.png" width="85%" alt="Model Comparison Chart" />
@@ -447,7 +447,3 @@ This project is a research and portfolio benchmark, not a production prognostic 
 
 - **Dataset**: NASA Prognostics Center of Excellence (PCoE). C-MAPSS data is publicly available for research purposes.
 - **Frameworks**: Python, PyTorch, XGBoost, scikit-learn, pandas, NumPy, SciPy, Matplotlib.
-
----
-
-*Built by Valdir as a Data Science Portfolio Project — showcasing multi-paradigm prognostic modeling for Predictive Maintenance. ✈️*

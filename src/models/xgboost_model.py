@@ -23,7 +23,7 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
-from sklearn.model_selection import GridSearchCV, KFold
+from sklearn.model_selection import KFold
 from xgboost import XGBRegressor
 
 from src.config import MODELS_DIR, XGBOOST_CV_FOLDS, XGBOOST_PARAM_GRID
@@ -39,7 +39,7 @@ class XGBoostRUL:
 
     Parameters
     ----------
-    param_grid     : hyperparameter grid for GridSearchCV
+    param_grid     : hyperparameter space for RandomizedSearchCV
     cv_folds       : number of cross-validation folds
     random_state   : seed for reproducibility
     """
@@ -105,7 +105,7 @@ class XGBoostRUL:
             cv = KFold(n_splits=self.cv_folds, shuffle=True, random_state=self.random_state)
             
             # Ensure the grid is compatible with RandomizedSearchCV
-            # (Standard GridSearchCV dict is usually fine)
+            # (Standard parameter dict is usually fine)
             rs = RandomizedSearchCV(
                 base_model,
                 self.param_grid,

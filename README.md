@@ -392,7 +392,7 @@ predictive-maintenance-turbofan-rul/
 │   │
 │   ├── models/
 │   │   ├── stochastic_model.py  # WLS + Bootstrap RUL estimation
-│   │   ├── xgboost_model.py     # XGBoost + GridSearchCV wrapper
+│   │   ├── xgboost_model.py     # XGBoost + RandomizedSearchCV wrapper
 │   │   └── lstm_model.py        # Attention-LSTM architecture + trainer
 │   │
 │   └── pipelines/
@@ -414,7 +414,7 @@ predictive-maintenance-turbofan-rul/
 │   ├── trained_models/          # Saved model weights (.pt, .json)
 │   └── metadata/                # Stochastic engine parameters
 │
-├── tests/                       # PyTest unit tests for preprocessing & evaluation
+├── tests/                       # PyTest unit/smoke tests for data, pipelines, and models
 ├── docs/                        # Documentation figures
 ├── requirements.txt
 └── README.md

@@ -1,4 +1,4 @@
-# 🛸 Turbofan Engine RUL Prognostics
+# Turbofan Engine RUL Prognostics
 
 > **Multi-paradigm Remaining Useful Life (RUL) prediction on the NASA C-MAPSS dataset — comparing a Stochastic degradation model, an optimized XGBoost regressor, and a deep Attention-LSTM network.**
 

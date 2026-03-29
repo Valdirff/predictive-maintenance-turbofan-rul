@@ -34,9 +34,12 @@ artigos/
 notebooks/
 
 # ── Artifacts — generated at runtime, not committed ──────────────────────────
-artifacts/trained_models/
-artifacts/scalers/
-artifacts/metadata/
+artifacts/trained_models/*
+!artifacts/trained_models/.gitkeep
+artifacts/scalers/*
+!artifacts/scalers/.gitkeep
+artifacts/metadata/*
+!artifacts/metadata/.gitkeep
 
 # ── Results — exclude figures NOT used in the README ─────────────────────────
 # Stochastic figures: keep only hi_fleet_trajectories and real_vs_pred

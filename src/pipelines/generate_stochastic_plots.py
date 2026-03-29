@@ -100,7 +100,7 @@ def _engine_sample(
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Plot 1 — Fleet HI trajectories (artigo_exp_2 Fig 3 style)
+# Plot 1 — Fleet HI trajectories (Maulana et al., 2023 Fig 3 style)
 # ─────────────────────────────────────────────────────────────────────────────
 
 def plot_hi_fleet_trajectories(
@@ -146,7 +146,7 @@ def plot_hi_fleet_trajectories(
     ax.set_ylim(-0.05, 1.08)
     ax.set_title(
         "Fleet Health Indicator Trajectories — FD001\n"
-        r"$\mathit{HI}(t)$ constructed via Logistic Regression (artigo_exp_2 style)",
+        r"$\mathit{HI}(t)$ constructed via Logistic Regression (Maulana et al., 2023 style)",
         fontsize=13, fontweight="bold",
     )
     ax.legend(fontsize=10, loc="upper right")
@@ -156,7 +156,7 @@ def plot_hi_fleet_trajectories(
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Plot 2 — WLS degradation fit overlay (artigo_exp_1 Fig 5 style)
+# Plot 2 — WLS degradation fit overlay (Wen et al. 2021 Fig 5 style)
 # ─────────────────────────────────────────────────────────────────────────────
 
 def plot_hi_degradation_detail(
@@ -286,7 +286,7 @@ def plot_rul_per_engine_with_ci(
 ) -> plt.Figure:
     """
     Bar chart showing predicted RUL with 90% CI shading alongside true RUL
-    for the first n_show test engines — inspired by artigo_exp_2 prognosis plot.
+    for the first n_show test engines — inspired by Maulana et al. 2023 prognosis plot.
     """
     df = rul_df.copy().head(n_show)
     x = np.arange(len(df))
@@ -382,7 +382,7 @@ def plot_residuals_analysis(y_true: np.ndarray, y_pred: np.ndarray) -> plt.Figur
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Plot 6 — WLS log-log parameter space (artigo_exp_1 Fig 4 style)
+# Plot 6 — WLS log-log parameter space (Wen et al. Fig 4 style)
 # ─────────────────────────────────────────────────────────────────────────────
 
 
@@ -436,9 +436,8 @@ def plot_wls_loglog_fit(
         axes_flat[i].set_visible(False)
 
     fig.suptitle(
-        'WLS Power-Function Fit in Log-Log Space per Engine
-'
-        r'Model: $\mathrm{HI}(t) = e^{	heta^{(0)}} \cdot t^{	heta^{(1)}}$'
+        'WLS Power-Function Fit in Log-Log Space per Engine\n'
+        r'Model: $\mathrm{HI}(t) = e^{\theta^{(0)}} \cdot t^{\theta^{(1)}}$'
         + f'   phi={phi:.4f}',
         fontsize=13, fontweight='bold',
     )

@@ -61,7 +61,7 @@ def _plot_feature_importance(model: XGBoostRUL, top_n: int = 15) -> None:
 def run(subset: str = SUBSET) -> dict:
     print(f"\n{'='*60}")
     print(f"  XGBoost Regressor — {subset}")
-    print(f"  (Methodology: artigo_XGBoost_1)")
+    print(f"  (Methodology: Feature-Engineered Gradient Boosting)")
     print(f"{'='*60}\n")
 
     # ── 1. Load data ──────────────────────────────────────────────

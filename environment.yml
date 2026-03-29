@@ -19,5 +19,3 @@ dependencies:
   - pytest>=7.4
   - pytorch>=2.1
   - cpuonly
-  - pip:
-    - xgboost>=2.0

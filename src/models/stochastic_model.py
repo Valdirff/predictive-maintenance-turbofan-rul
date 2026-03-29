@@ -7,7 +7,7 @@ Implementation
 --------------
 Faithfully implements the framework from:
 
-  artigo_exp_1 — Wen et al. (2021), RESS 205:107241
+  Base methodology — Wen et al. (2021), RESS 205:107241
     "A generalized RUL prediction method for complex systems
      based on composite health indicator"
 
@@ -265,7 +265,7 @@ class StochasticDegradationRUL:
         }
 
     # ──────────────────────────────────────────────────────────────────────
-    # Parameter reconstruction  (Section 2.3 of artigo_exp_1)
+    # Parameter reconstruction (Wen et al. 2021, Section 2.3)
     # ──────────────────────────────────────────────────────────────────────
 
     def _reconstruct_params(

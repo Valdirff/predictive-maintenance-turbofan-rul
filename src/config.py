@@ -31,7 +31,7 @@ COLUMN_NAMES = (
     + [f"sensor_{i}" for i in range(1, 22)]
 )
 
-# Sensors to DROP — uninformative in FD001 as per 'artigo_XGBoost_1'
+# Sensors to DROP — uninformative in FD001 as per PHM literature
 SENSORS_TO_DROP = [
     "op_setting_1",
     "op_setting_2",

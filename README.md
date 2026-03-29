@@ -76,7 +76,7 @@ Detailed analysis of FD001 sensor variance reveals that 7 sensors (`sensor_1`, `
 A well-established practice in C-MAPSS literature is to **cap the RUL target at 130 cycles** (piecewise-linear degradation assumption). This reflects the empirical observation that during the early, healthy phase of engine life, the sensor signal-to-noise ratio for degradation is very low. By capping predictions at 130 cycles, models are trained exclusively on the informative degradation phase.
 
 > [!IMPORTANT]
-> All three models in this repository use **RUL_CAP = 130 cycles** for a completely fair and consistent comparison. This was not applied in the initial stochastic baseline, which artificially inflated its NASA Score to ~19,900. After applying the cap consistently, results are directly comparable.
+> All models in this repository, including the Machine Learning ones, use **RUL_CAP = 130 cycles** during training to focus on the informative degradation phase. The Stochastic framework natively predicts raw unbounded exponential decay — which is why its NASA Score remains astronomically high (~19,912) due to massive penalties on early-cycle optimistic forecasting. Both approaches are maintained here for a transparent comparison.
 
 ---
 
@@ -292,7 +292,7 @@ Where `d = RUL_pred - RUL_true`. A late prediction of 20 cycles receives a penal
 | Model | RMSE | NASA Score | Train Time | Inference Time | Interpretability |
 | :--- | :---: | :---: | :---: | :---: | :--- |
 | **Stochastic** | 46.8 | 19,912 | < 1s | 6.5s | High (physical) |
-| **XGBoost** | **13.96** | **342** | ~60s | 0.008s | Medium (SHAP) |
+| **XGBoost** | **13.96** | **342** | ~60s | 0.008s | High (Feature Importance) |
 | **Attention-LSTM** | 16.55 | 440 | ~510s | 0.014s | Low/Medium (Attention weights) |
 
 <p align="center">
@@ -318,7 +318,7 @@ This result goes against a common intuition that "more complex = more accurate".
 
 ### Design Choices
 
-- **Piecewise-linear RUL capping (130 cycles)**: Applied uniformly to all three models for a fair comparison. Without this, early-cycle stochastic predictions of 300+ cycles would generate catastrophic NASA Score penalties from the exponential penalty function.
+- **Piecewise-linear RUL capping (130 cycles)**: Empirically focuses the ML models purely on the informative degradation timeline. The Stochastic model by definition fits the whole curve and receives severe penalties (NASA Score > 19000) for optimistic early-life extrapolations, which directly showcases the peril of strict polynomial assumptions.
 - **Correlation-based sensor filtering (|r| > 0.1 with RUL)**: Reduces the input dimensionality for the LSTM and improves signal-to-noise ratio.
 - **Rolling Median Filter (window=5)**: Applied before all models to suppress sharp sensor spikes resulting from transient thermodynamic events during startup.
 - **Validation split by engine (not by cycle)**: Ensures no data leakage — all cycles of a given engine appear exclusively in either training or validation.
@@ -330,7 +330,7 @@ This result goes against a common intuition that "more complex = more accurate".
 ### 1. Clone the Repository
 ```bash
 git clone <repo-url>
-cd turbofan-rul-prognostics
+cd predictive-maintenance-turbofan-rul
 ```
 
 ### 2. Install Dependencies
@@ -375,7 +375,7 @@ pytest tests/ -v
 ## Repository Structure
 
 ```text
-turbofan-rul-prognostics/
+predictive-maintenance-turbofan-rul/
 │
 ├── data/
 │   ├── raw/CMAPSSData/          # NASA raw text files (train/test/RUL)

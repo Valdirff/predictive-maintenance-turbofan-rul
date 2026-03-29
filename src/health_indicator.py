@@ -12,7 +12,7 @@ Construction methods:
   - 'pca'      : first principal component of selected sensors (sign-corrected)
   - 'weighted' : variance-weighted average of selected sensors
   - 'logistic' : fleet-level logistic regression on healthy/failure samples
-                 (artigo_exp_2 style) — use LogisticHIBuilder class
+                 (Maulana et al., 2023 style) — use LogisticHIBuilder class
 """
 
 from __future__ import annotations
@@ -122,7 +122,7 @@ def add_hi_column(
 
 
 # ---------------------------------------------------------------------------
-# HI construction — Logistic (artigo_exp_2 style)
+# HI construction — Logistic (Maulana et al., 2023 style)
 # ---------------------------------------------------------------------------
 
 class LogisticHIBuilder:
@@ -130,7 +130,7 @@ class LogisticHIBuilder:
     Constructs a calibrated Health Indicator using logistic regression
     trained on per-engine healthy-vs-failure state samples.
 
-    Inspired by artigo_exp_2 (Maulana et al., 2023, Machines).
+    Inspired by Maulana et al. (2023, Machines).
 
     The logit function:
         g(F) = α + Σ(βⱼ Fⱼ)
